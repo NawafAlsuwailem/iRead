@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - stc408@helios.csesalford.com" uuid="15f4e9e5-0aab-4e19-b8c0-2c89a666e4aa">
+      <database-info product="MySQL" version="5.7.17-0ubuntu0.16.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <user-name>stc408</user-name>
+      <introspection-schemas>*:information_schema,stc408</introspection-schemas>
+      <resolve-scope>stc408:</resolve-scope>
+      <unqualified-resolve-schemas>stc408:</unqualified-resolve-schemas>
+    </data-source>
+  </component>
+</project>

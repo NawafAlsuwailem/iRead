@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - stc408@helios.csesalford.com" uuid="83ac1931-1654-4c87-b3d8-5acf8bcfc4b6">
+    <database-info product="MySQL" version="5.7.16-0ubuntu0.16.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="stc408">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="information_schema"/>
+      <table id="3" parent="1" name="books"/>
+      <table id="4" parent="1" name="courses"/>
+      <table id="5" parent="1" name="students"/>
+      <table id="6" parent="1" name="Users"/>
+      <table id="7" parent="1" name="user_basket"/>
+      <table id="8" parent="1" name="book_reviews"/>
+      <column id="9" parent="3" name="book_id">
+        <mandatory>1</mandatory>
+        <data-type>int(45)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="10" parent="3" name="book_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="11" parent="3" name="book_price">
+        <mandatory>1</mandatory>
+        <data-type>double unsigned|0</data-type>
+      </column>
+      <column id="12" parent="3" name="book_author">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="13" parent="3" name="book_category">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="14" parent="3" name="noInStock">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+      </column>
+      <column id="15" parent="3" name="photo_name">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="16" parent="3" name="advanceCategory">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <index id="17" parent="3" name="books_book_id_uindex">
+        <columns>book_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="18" parent="3" name="PRIMARY">
+        <columns>book_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="19" parent="3" name="books_book_id_uindex">
+        <columns>book_id</columns>
+        <underlying-index>books_book_id_uindex</underlying-index>
+      </key>
+      <column id="20" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="21" parent="4" name="course_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="22" parent="4" name="programme_leader">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <key id="23" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="24" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="25" parent="5" name="first_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="26" parent="5" name="last_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="27" parent="5" name="international">
+        <mandatory>1</mandatory>
+        <data-type>tinytext|0</data-type>
+      </column>
+      <column id="28" parent="5" name="courseID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="29" parent="5" name="studentscol">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="30" parent="5" name="photo_name">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <index id="31" parent="5" name="fk_students_1_idx">
+        <columns>courseID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="32" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="33" parent="5" name="fk_students_1">
+        <columns>courseID</columns>
+        <ref-key>~.courses.PRIMARY</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <column id="34" parent="6" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(45)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="35" parent="6" name="eMail">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="36" parent="6" name="phoneNumber">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="37" parent="6" name="houseNumber">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="38" parent="6" name="streetName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="39" parent="6" name="city">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="40" parent="6" name="country">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="41" parent="6" name="postCode">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="42" parent="6" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="43" parent="6" name="isAdmin">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)|0</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="44" parent="6" name="Users_eMail_uindex">
+        <columns>eMail</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="45" parent="6" name="Users_id_uindex">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="46" parent="6" name="Users_phoneNumber_uindex">
+        <columns>phoneNumber</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="47" parent="6" name="PRIMARY">
+        <columns>user_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="48" parent="6" name="Users_id_uindex">
+        <columns>user_id</columns>
+        <underlying-index>Users_id_uindex</underlying-index>
+      </key>
+      <key id="49" parent="6" name="Users_eMail_uindex">
+        <columns>eMail</columns>
+        <underlying-index>Users_eMail_uindex</underlying-index>
+      </key>
+      <key id="50" parent="6" name="Users_phoneNumber_uindex">
+        <columns>phoneNumber</columns>
+        <underlying-index>Users_phoneNumber_uindex</underlying-index>
+      </key>
+      <column id="51" parent="7" name="basket_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="52" parent="7" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="53" parent="7" name="book_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10)|0</data-type>
+      </column>
+      <column id="54" parent="7" name="quantity">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="55" parent="7" name="books_basket___fk">
+        <columns>book_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="56" parent="7" name="user_basket_basket_id_uindex">
+        <columns>basket_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="57" parent="7" name="user_basket___fk">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="58" parent="7" name="PRIMARY">
+        <columns>basket_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="59" parent="7" name="user_basket_basket_id_uindex">
+        <columns>basket_id</columns>
+        <underlying-index>user_basket_basket_id_uindex</underlying-index>
+      </key>
+      <foreign-key id="60" parent="7" name="user_basket___fk">
+        <columns>user_id</columns>
+        <ref-key>~.Users.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="61" parent="7" name="books_basket___fk">
+        <columns>book_id</columns>
+        <ref-key>~.books.books_book_id_uindex</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="62" parent="8" name="review_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="63" parent="8" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="64" parent="8" name="book_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="65" parent="8" name="comment">
+        <mandatory>1</mandatory>
+        <data-type>varchar(400)|0</data-type>
+      </column>
+      <column id="66" parent="8" name="userEmail">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <index id="67" parent="8" name="book_reviews_review_id_uindex">
+        <columns>review_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="68" parent="8" name="FKForBooks">
+        <columns>book_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="69" parent="8" name="FKForUsers">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="70" parent="8" name="PRIMARY">
+        <columns>review_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="71" parent="8" name="book_reviews_review_id_uindex">
+        <columns>review_id</columns>
+        <underlying-index>book_reviews_review_id_uindex</underlying-index>
+      </key>
+      <foreign-key id="72" parent="8" name="FKForUsers">
+        <columns>user_id</columns>
+        <ref-key>~.Users.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="73" parent="8" name="FKForBooks">
+        <columns>book_id</columns>
+        <ref-key>~.books.books_book_id_uindex</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>
